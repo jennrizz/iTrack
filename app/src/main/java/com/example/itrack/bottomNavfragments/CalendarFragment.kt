@@ -131,7 +131,7 @@ class CalendarFragment : Fragment(R.layout.fragment_calendar) {
                         eventItems += EventCalendarCycle(
                                 eventName = " ",
                                 date = CalendarDate(sdf.parse(pDays.toString()).time),
-                                color = context.getColorInt(R.color.red))
+                                color = context.getColorInt(R.color.white))
                     }
                     else {
                         eventItems += EventCalendarCycle(
