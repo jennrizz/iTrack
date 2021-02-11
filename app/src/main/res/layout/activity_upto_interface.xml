@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Upto_interface"
+    android:orientation="vertical">
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:text="WHAT HAVE YOU BEEN UP TO?"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal"
+        >
+        <ImageButton
+            android:id="@+id/smile"
+            android:layout_width="70dp"
+            android:layout_height="90dp"
+            android:src="@drawable/family"
+            android:layout_marginLeft="50dp"
+            android:backgroundTint="@color/white"
+
+            />
+
+        <ImageButton
+            android:layout_marginTop="15dp"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:src="@drawable/exercise1"
+            android:backgroundTint="@color/white"
+
+            />
+        <ImageButton
+            android:id="@+id/meh"
+            android:layout_marginTop="15dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/date1"
+            android:layout_marginLeft="5dp"
+            android:backgroundTint="@color/white"
+            />
+        <ImageButton
+            android:id="@+id/sad"
+            android:layout_marginTop="15dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/sports1"
+            android:layout_marginLeft="5dp"
+            android:backgroundTint="@color/white"
+
+            />
+        <ImageButton
+            android:id="@+id/awful"
+            android:layout_marginTop="15dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/friends1"
+            android:layout_marginLeft="5dp"
+            android:backgroundTint="@color/white"
+
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="Family"
+            android:layout_marginLeft="65dp"/>
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:text="Exercise"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:text="Date"
+            android:layout_marginLeft="25dp"/>
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="Sports"
+            android:layout_marginLeft="19dp"/>
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="Friends"
+            android:layout_marginLeft="19dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="-59dp"
+        >
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="90dp"
+            android:src="@drawable/family"
+            android:layout_marginLeft="50dp"
+            android:backgroundTint="@color/white"
+
+
+
+            />
+
+        <ImageButton
+            android:layout_marginTop="15dp"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:src="@drawable/exercise1"
+            android:backgroundTint="@color/white"
+
+            />
+        <ImageButton
+
+            android:layout_marginTop="15dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/date1"
+            android:layout_marginLeft="5dp"
+            android:backgroundTint="@color/white"
+            />
+        <ImageButton
+
+            android:layout_marginTop="15dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/sports1"
+            android:layout_marginLeft="5dp"
+            android:backgroundTint="@color/white"
+
+            />
+        <ImageButton
+            android:layout_marginTop="15dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/friends1"
+            android:layout_marginLeft="5dp"
+            android:backgroundTint="@color/white"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="Family"
+            android:layout_marginLeft="65dp"/>
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:text="Exercise"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:text="Date"
+            android:layout_marginLeft="25dp"/>
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="Sports"
+            android:layout_marginLeft="19dp"/>
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="Friends"
+            android:layout_marginLeft="19dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="-59dp"
+        >
+        <ImageButton
+
+            android:layout_width="70dp"
+            android:layout_height="90dp"
+            android:src="@drawable/family"
+            android:layout_marginLeft="50dp"
+            android:backgroundTint="@color/white"
+
+
+
+            />
+
+        <ImageButton
+            android:id="@+id/good"
+            android:layout_marginTop="15dp"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:src="@drawable/exercise1"
+            android:backgroundTint="@color/white"
+
+            />
+        <ImageButton
+            android:layout_marginTop="15dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/date1"
+            android:layout_marginLeft="5dp"
+            android:backgroundTint="@color/white"
+            />
+        <ImageButton
+            android:layout_marginTop="15dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/sports1"
+            android:layout_marginLeft="5dp"
+            android:backgroundTint="@color/white"
+
+            />
+        <ImageButton
+
+            android:layout_marginTop="15dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/friends1"
+            android:layout_marginLeft="5dp"
+            android:backgroundTint="@color/white"
+
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="Family"
+            android:layout_marginLeft="65dp"/>
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:text="Exercise"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:text="Date"
+            android:layout_marginLeft="25dp"/>
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="Sports"
+            android:layout_marginLeft="19dp"/>
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="Friends"
+            android:layout_marginLeft="19dp"/>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/medium_azure"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal"/>
+       <EditText
+           android:layout_width="300dp"
+           android:layout_height="50dp"
+           android:layout_marginTop="200dp"
+           android:layout_gravity="center"
+           android:backgroundTint="@color/black"
+           android:hint="Add Note..."
+           android:textColorHint="@color/black"
+           android:paddingLeft="10dp"
+           android:drawableLeft="@drawable/ic_action_name"/>
+
+    </LinearLayout>
+

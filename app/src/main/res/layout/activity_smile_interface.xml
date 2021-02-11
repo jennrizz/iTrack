@@ -115,4 +115,13 @@
             />
 
     </LinearLayout>
+    <ImageButton
+        android:id="@+id/next"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_continue"
+        android:backgroundTint="@color/white"
+        android:layout_gravity="center"
+        android:layout_marginTop="270dp"
+        />
 </LinearLayout>

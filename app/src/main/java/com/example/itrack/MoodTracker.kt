@@ -26,6 +26,7 @@ class MoodTracker : AppCompatActivity() {
         val Meh =findViewById<ImageButton>(R.id.meh)
         val Sad = findViewById<ImageButton>(R.id.sad)
         val Awful = findViewById<ImageButton>(R.id.awful)
+        val next = findViewById<ImageButton>(R.id.next)
         Smile.setOnClickListener {
             val purposeIntent = Intent(applicationContext, SmileInterface::class.java)
             startActivity(purposeIntent)
@@ -45,6 +46,10 @@ class MoodTracker : AppCompatActivity() {
         Awful.setOnClickListener {
             val purposeIntent = Intent(applicationContext,Awfulinterface::class.java)
             startActivity(purposeIntent)
+        }
+        next.setOnClickListener {
+            val Next = Intent(applicationContext,Upto_interface::class.java)
+            startActivity(Next)
         }
 
     fun lastPeriod(view: View) {

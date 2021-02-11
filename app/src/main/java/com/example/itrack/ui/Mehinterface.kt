@@ -1,9 +1,11 @@
 package com.example.itrack.ui
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ImageButton
 import android.widget.TextView
 import com.example.itrack.R
 import java.text.SimpleDateFormat
@@ -15,9 +17,41 @@ class Mehinterface : AppCompatActivity() {
     var lperiod_Month = 0
     var lperiod_Day = 0
     var lPeriodDate = " "
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mehinterface)
+        val Smile =  findViewById<ImageButton>(R.id.smile)
+        val Good = findViewById<ImageButton>(R.id.good)
+        val Meh =findViewById<ImageButton>(R.id.meh)
+        val Sad = findViewById<ImageButton>(R.id.sad)
+        val Awful = findViewById<ImageButton>(R.id.awful)
+        val next = findViewById<ImageButton>(R.id.next)
+        Smile.setOnClickListener {
+            val purposeIntent = Intent(applicationContext, SmileInterface::class.java)
+            startActivity(purposeIntent)
+        }
+        Good.setOnClickListener {
+            val purposeIntent = Intent(applicationContext, Goodinterface::class.java)
+            startActivity(purposeIntent)
+        }
+        Meh.setOnClickListener {
+            val purposeIntent = Intent(applicationContext,Mehinterface::class.java)
+            startActivity(purposeIntent)
+        }
+        Sad.setOnClickListener {
+            val purposeIntent = Intent(applicationContext,Sadinterface::class.java)
+            startActivity(purposeIntent)
+        }
+        Awful.setOnClickListener {
+            val purposeIntent = Intent(applicationContext,Awfulinterface::class.java)
+            startActivity(purposeIntent)
+        }
+        next.setOnClickListener {
+            val Next = Intent(applicationContext,Upto_interface::class.java)
+            startActivity(Next)
+        }
+
         fun lastPeriod(view: View) {
 
 
