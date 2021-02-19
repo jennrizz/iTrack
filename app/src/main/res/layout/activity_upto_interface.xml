@@ -110,7 +110,7 @@
         <ImageButton
             android:layout_width="70dp"
             android:layout_height="90dp"
-            android:src="@drawable/family"
+            android:src="@drawable/sleep1"
             android:layout_marginLeft="50dp"
             android:backgroundTint="@color/white"
 
@@ -122,7 +122,7 @@
             android:layout_marginTop="15dp"
             android:layout_width="70dp"
             android:layout_height="60dp"
-            android:src="@drawable/exercise1"
+            android:src="@drawable/eat_healthy"
             android:backgroundTint="@color/white"
 
             />
@@ -131,7 +131,7 @@
             android:layout_marginTop="15dp"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/date1"
+            android:src="@drawable/relax1"
             android:layout_marginLeft="5dp"
             android:backgroundTint="@color/white"
             />
@@ -140,7 +140,7 @@
             android:layout_marginTop="15dp"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/sports1"
+            android:src="@drawable/movie1"
             android:layout_marginLeft="5dp"
             android:backgroundTint="@color/white"
 
@@ -149,7 +149,7 @@
             android:layout_marginTop="15dp"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/friends1"
+            android:src="@drawable/reading"
             android:layout_marginLeft="5dp"
             android:backgroundTint="@color/white"
 
@@ -164,7 +164,7 @@
         <TextView
             android:layout_width="50dp"
             android:layout_height="20dp"
-            android:text="Family"
+            android:text="Sleep Early"
             android:layout_marginLeft="65dp"/>
 
         <TextView
@@ -173,21 +173,21 @@
             android:text="Exercise"
             android:layout_marginLeft="10dp"/>
         <TextView
-            android:layout_width="30dp"
+            android:layout_width="40dp"
             android:layout_height="20dp"
-            android:text="Date"
+            android:text="Relax"
             android:layout_marginLeft="25dp"/>
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="60dp"
             android:layout_height="20dp"
-            android:text="Sports"
-            android:layout_marginLeft="19dp"/>
+            android:text="Movie"
+            android:layout_marginLeft="30dp"/>
 
         <TextView
-            android:layout_width="50dp"
+            android:layout_width="55dp"
             android:layout_height="20dp"
-            android:text="Friends"
-            android:layout_marginLeft="19dp"/>
+            android:text="Reading"
+            android:layout_marginLeft="6dp"/>
 
     </LinearLayout>
     <LinearLayout
@@ -200,7 +200,7 @@
 
             android:layout_width="70dp"
             android:layout_height="90dp"
-            android:src="@drawable/family"
+
             android:layout_marginLeft="50dp"
             android:backgroundTint="@color/white"
 
@@ -213,7 +213,7 @@
             android:layout_marginTop="15dp"
             android:layout_width="70dp"
             android:layout_height="60dp"
-            android:src="@drawable/exercise1"
+            android:src="@drawable/gaming1"
             android:backgroundTint="@color/white"
 
             />
@@ -221,25 +221,16 @@
             android:layout_marginTop="15dp"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/date1"
+            android:src="@drawable/cleaning1"
             android:layout_marginLeft="5dp"
             android:backgroundTint="@color/white"
             />
-        <ImageButton
-            android:layout_marginTop="15dp"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:src="@drawable/sports1"
-            android:layout_marginLeft="5dp"
-            android:backgroundTint="@color/white"
 
-            />
         <ImageButton
 
             android:layout_marginTop="15dp"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/friends1"
             android:layout_marginLeft="5dp"
             android:backgroundTint="@color/white"
 
@@ -248,34 +239,28 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="75dp"
+        android:layout_height="30dp"
         android:orientation="horizontal">
         <TextView
             android:layout_width="50dp"
             android:layout_height="20dp"
-            android:text="Family"
             android:layout_marginLeft="65dp"/>
 
         <TextView
             android:layout_width="60dp"
             android:layout_height="20dp"
-            android:text="Exercise"
-            android:layout_marginLeft="10dp"/>
+            android:text="Gaming"
+            android:layout_marginLeft="15dp"/>
         <TextView
-            android:layout_width="30dp"
+            android:layout_width="60dp"
             android:layout_height="20dp"
-            android:text="Date"
-            android:layout_marginLeft="25dp"/>
-        <TextView
-            android:layout_width="50dp"
-            android:layout_height="20dp"
-            android:text="Sports"
-            android:layout_marginLeft="19dp"/>
+            android:text="Cleaning"
+            android:layout_marginLeft="3dp"/>
+
 
         <TextView
             android:layout_width="50dp"
             android:layout_height="20dp"
-            android:text="Friends"
             android:layout_marginLeft="19dp"/>
 
     </LinearLayout>
@@ -285,18 +270,46 @@
         android:background="@color/medium_azure"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="75dp"
-        android:orientation="horizontal"/>
-       <EditText
-           android:layout_width="300dp"
-           android:layout_height="50dp"
-           android:layout_marginTop="200dp"
-           android:layout_gravity="center"
-           android:backgroundTint="@color/black"
-           android:hint="Add Note..."
-           android:textColorHint="@color/black"
-           android:paddingLeft="10dp"
-           android:drawableLeft="@drawable/ic_action_name"/>
+        android:layout_height="220dp"
+        android:orientation="horizontal">
 
+    </LinearLayout>
+    <ImageView
+        android:layout_marginTop="-220dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_note_add"
+        android:paddingLeft="5dp"
+      android:layout_marginLeft="30dp"
+        />
+    <TextView
+        android:layout_marginTop="-40dp"
+        android:layout_width="80dp"
+        android:layout_height="20dp"
+        android:text="ADD NOTE:"
+        android:background="@color/white"
+        android:gravity="center"
+        android:layout_marginLeft="70dp"
+        android:textColor="@color/black"
+        />
+
+<MultiAutoCompleteTextView
+    android:paddingTop="90dp"
+    android:layout_width="300dp"
+    android:layout_height="100dp"
+    android:layout_marginTop="2dp"
+    android:layout_gravity="center"
+    android:backgroundTint="@color/black"
+    android:hint="Add Note..."
+    android:textColor="@color/black"
+    android:paddingLeft="10dp"/>
+
+    <ImageButton
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/save1"
+        android:backgroundTint="@color/white"
+        android:layout_gravity="center"
+        />
     </LinearLayout>
 

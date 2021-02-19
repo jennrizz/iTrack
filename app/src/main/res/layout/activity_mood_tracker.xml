@@ -56,7 +56,6 @@
             android:clickable="true"
             android:gravity="center"
             android:hint="Input Time"
-            android:onClick="lastPeriod"
             android:textColor="@color/black"
             android:textSize="18dp" />
     </LinearLayout>
@@ -74,7 +73,7 @@
         android:layout_marginLeft="50dp"
         android:onClick="smile"
 
-        />
+        tools:ignore="OnClick" />
 
         <ImageButton
             android:id="@+id/good"
@@ -118,7 +117,6 @@
         android:id="@+id/next"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:src="@drawable/ic_continue"
         android:backgroundTint="@color/white"
         android:layout_gravity="center"
         android:layout_marginTop="270dp"

@@ -9,6 +9,7 @@ import android.widget.GridView
 import com.example.itrack.*
 import com.example.itrack.adapters.ListOfGraphSelection
 import com.example.itrack.adapters.graphGridView
+import com.example.itrack.ui.BbtInterface
 
 
 class graphDataFragment : Fragment(R.layout.fragment_graph_data) {
@@ -29,7 +30,7 @@ class graphDataFragment : Fragment(R.layout.fragment_graph_data) {
                         startActivity(Intent(activity, MoodTracker::class.java))
                     }
                     else if (imgPos == pos2){
-                        startActivity(Intent(activity, MainActivity::class.java))
+                        startActivity(Intent(activity, BbtInterface::class.java))
                     }
                     else if (imgPos == pos3){
                         startActivity( Intent(activity,Pedometer::class.java))

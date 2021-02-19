@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "226003078959",
+    "project_id": "itrack-4ed89",
+    "storage_bucket": "itrack-4ed89.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:226003078959:android:a9f9efa7b148fe792e5bda",
+        "android_client_info": {
+          "package_name": "com.example.itrack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "226003078959-d9lmrrhh8si6c5aavb593abeur1n8pbi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBD8PEePfguCO8eewOQ1xHYq_TsBoVAAWA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "226003078959-d9lmrrhh8si6c5aavb593abeur1n8pbi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
