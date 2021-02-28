@@ -3,11 +3,15 @@ package com.example.itrack
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+
 import android.view.View
-import android.widget.Toast
+import android.widget.EditText
+
+
 import ru.cleverpumpkin.calendar.CalendarDate
 import java.text.SimpleDateFormat
 import java.util.*
+
 
 class LogIn : AppCompatActivity() {
 
@@ -25,16 +29,19 @@ class LogIn : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_log_in)
 
-        // get intent
 
         lperiod_Year = intent.getIntExtra("lperiod_Year", 0)
         lperiod_Month = intent.getIntExtra("lperiod_month", 0)
         lperiod_Day = intent.getIntExtra("lperiod_Day", 0)
         avgcycle = intent.getIntExtra("avgcycle", 0)
         lPeriodDate = intent.getStringExtra("lPeriodDate").toString()
+
     }
 
+
+
     fun createAccount(view : View){
+
         val homeIntent = Intent(applicationContext, Home::class.java)
         homeIntent.putExtra("lPeriodYear", lperiod_Year)
         homeIntent.putExtra("lperiod_month", lperiod_Month)

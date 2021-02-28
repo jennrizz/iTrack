@@ -12,7 +12,7 @@
     <EditText
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:id="@+id/userName"
+        android:id="@+id/tv_userName"
         android:layout_marginTop="200dp"
         android:layout_gravity="center"
         android:backgroundTint="@color/white"
@@ -24,7 +24,7 @@
     <EditText
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:id="@+id/password"
+        android:id="@+id/tv_password"
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:backgroundTint="@color/white"

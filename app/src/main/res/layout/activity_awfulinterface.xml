@@ -116,6 +116,39 @@
             />
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="Rad"
+            android:layout_marginLeft="65dp"/>
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="Good"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="Meh"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="Sad"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:text="Awful"
+            android:layout_marginLeft="15dp"/>
+
+    </LinearLayout>
     <ImageButton
         android:id="@+id/next"
         android:layout_width="60dp"

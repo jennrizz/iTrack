@@ -10,10 +10,11 @@ class Upto_interface : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_upto_interface)
-       /* val next = findViewById<ImageButton>(R.id.saveBtn)
+        val next = findViewById<ImageButton>(R.id.savebtn)
        next.setOnClickListener {
             val purposeIntent = Intent(applicationContext,SaveInterface::class.java)
             startActivity(purposeIntent)
-        }*/
+
+        }
     }
 }
