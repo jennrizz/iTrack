@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.SmileInterface"
     android:orientation="vertical">
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
@@ -157,4 +158,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="270dp"
         />
+
+
+
 </LinearLayout>
