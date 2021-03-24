@@ -18,7 +18,21 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/ic_action_experiod"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Expected Period"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/ic_action_experiod"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Period"
             android:textColor="@color/white"
             android:layout_gravity="center"
             android:layout_marginLeft="25dp"
@@ -31,6 +45,7 @@
             android:layout_marginLeft="15dp"
             android:layout_gravity ="center"
             android:textColor="@color/white"/>
+
 
     </LinearLayout>
     <ru.cleverpumpkin.calendar.CalendarView

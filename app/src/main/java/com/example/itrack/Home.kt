@@ -1,8 +1,10 @@
 package com.example.itrack
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
+import android.view.MenuItem
+import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
@@ -13,50 +15,61 @@ import androidx.fragment.app.FragmentTransaction
 import com.example.itrack.bottomNavfragments.CalendarFragment
 import com.example.itrack.bottomNavfragments.communityFragment
 import com.example.itrack.bottomNavfragments.graphDataFragment
+import com.example.itrack.drawerNav.drawerPofile
+import com.example.itrack.drawerNav.drawer_signout
+import com.example.itrack.drawerNav.drawershare
+import com.example.itrack.reminder.drawerReminder
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.DocumentReference
+import com.google.firebase.firestore.FirebaseFirestore
 
-class Home : AppCompatActivity() {
+class Home() : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+
     lateinit var drawLayout : DrawerLayout
     lateinit var toolbar : Toolbar
+    lateinit var drawerNav : NavigationView
     lateinit var bottomNav  : BottomNavigationView
     lateinit var calendarFragment : CalendarFragment
     lateinit var communityFragment: communityFragment
     lateinit var graphDataFragment: graphDataFragment
     lateinit var fragmentManager: FragmentManager
     lateinit var fragmentTransaction: FragmentTransaction
-
-    var lPeriodDate = " "
-    var lperiod_Year = 0
-    var lperiod_Month = 0
-    var lperiod_Day = 0
-    var avgcycle = 0
-
-
+    lateinit var usernameText: TextView
+    lateinit var auth: FirebaseAuth
+    lateinit var fstore: FirebaseFirestore
+    lateinit var docRef:DocumentReference
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+
 
         // set toolbar
         toolbar = findViewById<Toolbar>(R.id.nav_toolbar)
         setSupportActionBar(toolbar)
 
         //late init
+        auth = FirebaseAuth.getInstance()
+        fstore = FirebaseFirestore.getInstance()
+
+        val userid = auth.currentUser!!.uid
+        docRef = fstore.collection("userData").document(userid)
         drawLayout = findViewById(R.id.draw_layout)
+        drawerNav = findViewById(R.id.nav_view)
         bottomNav = findViewById(R.id.bottomNav)
         calendarFragment = CalendarFragment()
         communityFragment = communityFragment()
         graphDataFragment = graphDataFragment()
 
-        //call for navigationDrawer
+
+
+
+        //handling of navigation drawer
         actionBarDrawer()
-
-        //get intent data
-        lPeriodDate = intent.getStringExtra("lPeriodDate").toString()
-        lperiod_Year = intent.getIntExtra("lPeriodYear", 0)
-        lperiod_Month = intent.getIntExtra("lperiod_month", 0)
-        lperiod_Day = intent.getIntExtra("lperiod_Day", 0)
-        avgcycle = intent.getIntExtra("avgcycle", 0)
-
+        drawerNav.setNavigationItemSelectedListener(this)
+        val navheader = drawerNav.getHeaderView(0)
+        usernameText = navheader.findViewById(R.id.home_username)
 
         //bottom fragment commits
         currenBottomFragment(calendarFragment)
@@ -68,14 +81,40 @@ class Home : AppCompatActivity() {
             }
             true
         }
-
-
+        docRef.addSnapshotListener {
+            documentSnapshot, e ->
+            var usernametxt = documentSnapshot!!.getString("username")
+            var emailtxt = documentSnapshot!!.getString("email")
+            usernameText.text = usernametxt
+        }
     }
     // toggle drawer
     private fun actionBarDrawer(){
         val toggle = ActionBarDrawerToggle(this, drawLayout, toolbar, R.string.nav_drawer_open, R.string.nav_drawer_close)
         drawLayout.addDrawerListener(toggle)
         toggle.syncState()
+
+    }
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.nav_logOut -> {
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container, drawer_signout()).commit()
+            }
+            R.id.nav_prof ->{
+                var intent = Intent(applicationContext, drawerPofile::class.java)
+                startActivity(intent)
+            }
+            R.id.nav_share -> {
+                supportFragmentManager.beginTransaction().replace(R.id.fragment_container,drawershare()).commit()
+            }
+            R.id.nav_reminders ->{
+                startActivity(Intent(applicationContext, drawerReminder::class.java))
+            }
+        }
+
+
+        return true
     }
 
     override fun onBackPressed() {
@@ -88,25 +127,10 @@ class Home : AppCompatActivity() {
 
     // bottom navigation fragment
     private fun currenBottomFragment(fragment: Fragment){
-        if(fragment == calendarFragment){
-            val bundle = Bundle()
-            bundle.putString("lPeriodDate", lPeriodDate)
-            bundle.putInt("lperiod_month", lperiod_Month)
-            bundle.putInt("lperiod_Day", lperiod_Day)
-            bundle.putInt("lPeriodYear",  lperiod_Year)
-            bundle.putInt("avgcycle", avgcycle)
-
-            fragment.arguments = bundle
-        }
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.fragment_container, fragment)
             commit()
         }
     }
 
-    // send data to fragment
-    private fun sendData(){
-       //var bundle : new Bundle
-        //bundle.putString("lPeriodDate", lPeriodDate)
-    }
 }

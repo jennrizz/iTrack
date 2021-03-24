@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.itrack">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
@@ -10,14 +17,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ITrack">
 
+        <activity android:name=".reminder.reminderAdd" />
+        <activity android:name=".reminder.drawerReminder" />
+        <activity android:name=".drawerNav.drawerPofile" />
+        <activity android:name=".login" />
+        <activity android:name=".pedometer.pedometerMain" />
         <activity
             android:name=".Home"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-
-        <activity android:name=".startInformation"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
-        <activity android:name=".LogIn" />
-
+        <activity
+            android:name=".startInformation"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".CreateAcc" />
         <activity
             android:name=".welcomeWindow"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
@@ -27,8 +38,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <provider
+            android:name=".reminder.AlarmReminderProvider"
+            android:authorities="com.example.itrack.reminder" />
+        <service
+            android:name=".reminder.ReminderAlarmService"
+            android:exported="false"
+            android:enabled="true"/>
+        <receiver android:name=".reminder.reminderAdd$Reciever"/>
     </application>
 
 </manifest>

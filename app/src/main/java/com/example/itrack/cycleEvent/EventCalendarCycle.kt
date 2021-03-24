@@ -5,9 +5,7 @@ import ru.cleverpumpkin.calendar.CalendarDate
 import ru.cleverpumpkin.calendar.CalendarView
 
 
-// color indicators
-
-
+// color indicator
 class EventCalendarCycle(
         override val date: CalendarDate,
         override val color: Int,

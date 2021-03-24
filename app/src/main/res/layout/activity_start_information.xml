@@ -36,7 +36,7 @@
             android:layout_weight="1"/>
 
         <TextView
-            android:id="@+id/lastperiod"
+            android:id="@+id/userlastperiod"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:layout_marginRight="10dp"
@@ -44,7 +44,6 @@
             android:clickable="true"
             android:gravity="center"
             android:hint="dd/mm/yyyy"
-            android:onClick="lastPeriod"
             android:textColor="@color/black"
             android:textSize="18dp" />
     </LinearLayout>
@@ -54,12 +53,12 @@
         android:layout_height="wrap_content"
         android:text="I don't remember"
         android:layout_marginLeft="40dp"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="30dp"
-        android:background="@color/medium_azure"/>
-
+        android:background="@color/medium_azure" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -78,7 +77,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"/>
         <EditText
-            android:id="@+id/age"
+            android:id="@+id/userage"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:hint="00"
@@ -104,7 +103,7 @@
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Average Cylces Length"
+            android:text="Average Cylce Length"
             android:textSize="20dp"
             android:layout_marginLeft="25dp"/>
         <Space
@@ -113,7 +112,7 @@
             android:layout_weight="1"/>
 
         <Spinner
-            android:id="@+id/avgCycle"
+            android:id="@+id/useravgCycle"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
@@ -126,16 +125,18 @@
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:checkedButton="1">
+        android:checkedButton="1"
+        android:id="@+id/rGroup">
+
         <RadioButton
-            android:id="@+id/checkBox2"
+            android:id="@+id/userirreg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:text="Irregular Cycles" />
 
         <RadioButton
-            android:id="@+id/checkBox4"
+            android:id="@+id/usernoremember"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="I don't remember"
@@ -146,12 +147,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="30dp">
-        <Button
-            android:id="@+id/back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Back"
-            android:layout_marginLeft="25dp"/>
+
         <Space
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -161,8 +157,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Proceed"
-            android:layout_marginRight="25dp"
-            android:onClick="proceed"/>
+            android:layout_marginRight="25dp" />
     </LinearLayout>
 </LinearLayout>
 

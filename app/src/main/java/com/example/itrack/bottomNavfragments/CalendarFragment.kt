@@ -72,7 +72,9 @@ class CalendarFragment : Fragment(R.layout.fragment_calendar) {
         // The first day of week
         val firstDayOfWeek = Calendar.MONDAY
 
-        calendarView.datesIndicators = generateCycle()
+        if (avgCycle !=0) {
+            calendarView.datesIndicators = generateCycle()
+        }
 
         if (savedInstanceState == null) {
             calendarView.setupCalendar(selectionMode = CalendarView.SelectionMode.NONE, showYearSelectionView = false)

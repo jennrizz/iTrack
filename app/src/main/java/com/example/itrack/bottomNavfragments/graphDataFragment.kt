@@ -12,6 +12,7 @@ import com.example.itrack.MainActivity
 import com.example.itrack.R
 import com.example.itrack.adapters.ListOfGraphSelection
 import com.example.itrack.adapters.graphGridView
+import com.example.itrack.pedometer.pedometerMain
 
 
 class graphDataFragment : Fragment(R.layout.fragment_graph_data) {
@@ -36,7 +37,7 @@ class graphDataFragment : Fragment(R.layout.fragment_graph_data) {
                         startActivity(Intent(activity, MainActivity::class.java))
                     }
                     else if (imgPos == pos3){
-                        startActivity( Intent(activity, MainActivity::class.java))
+                        startActivity( Intent(activity, pedometerMain::class.java))
                     }
                     else true
                 }
