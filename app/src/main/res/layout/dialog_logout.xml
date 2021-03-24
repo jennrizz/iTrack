@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/aliceBlue">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:text="Sign Out Account"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="@color/red"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:text="Are you sure you would like to sign out?"
+        android:textSize="15dp"
+        android:layout_marginLeft="20dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp">
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="Cancel"
+            android:background="@color/baby_blue"
+            android:id="@+id/signout_no"/>
+        <Button
+            android:layout_marginLeft="15dp"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="SIGN out"
+            android:id="@+id/signout_yes"
+            android:background="@color/baby_blue"/>
+
+    </LinearLayout>
+</LinearLayout>

@@ -83,9 +83,13 @@ class Home() : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListe
         }
         docRef.addSnapshotListener {
             documentSnapshot, e ->
-            var usernametxt = documentSnapshot!!.getString("username")
-            var emailtxt = documentSnapshot!!.getString("email")
-            usernameText.text = usernametxt
+            if(documentSnapshot !=null) {
+                var usernametxt = documentSnapshot!!.getString("username")
+                usernameText.text = usernametxt
+            }
+            else{
+                usernameText.text = " "
+            }
         }
     }
     // toggle drawer

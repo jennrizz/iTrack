@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".reminder.reminderAdd">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/title_text"
+        android:text="Reminder Title"
+        android:textSize="15dp"
+        android:padding="16dp"
+        android:layout_marginLeft="8dp"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:id="@+id/reminder_add_view"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/title_text"
+        android:layout_marginTop="-4dp"
+        android:background="@color/baby_blue"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/reminder_title_ET"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:gravity="top|left"
+            android:hint="Reminder Title"
+            android:inputType="textCapWords|textMultiLine"
+            android:lines="4"
+            android:minLines="4"
+            android:scrollHorizontally="false"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/reminder_add_view">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:divider="@drawable/scrollview_shadow">
+
+            <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/reminder_date_view">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/reminder_date_TV"
+                android:text="Date"
+                android:textSize="20dp"
+                android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/reminder_date_ET"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="19dp"
+                    android:gravity="center"
+                    android:hint="Set Date"
+                    android:onClick="setDate"
+                    android:textSize="15dp"
+                    android:textColor="@color/azure"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:id="@+id/reminder_time_view"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/reminder_time_TV"
+                    android:text="Time"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/reminder_time_ET"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:hint="Set Time"
+                    android:gravity="center"
+                    android:onClick="setTime"
+                    android:textColor="@color/azure"
+                    android:textSize="15dp"
+                    android:layout_centerHorizontal="true"
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/reminder_repeat_view"
+                android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/reminder_repeat_view_TV"
+                android:text="Repeat"
+                android:textSize="20dp"
+                android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/reminder_repeat_view_TV"
+                    android:layout_marginLeft="16dp"
+                    android:id="@+id/reminder_repeat_text"/>
+            <Switch
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:id="@+id/reminder_repeat_view_switch"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:gravity="center"
+                android:textOn="On"
+                android:textOff="Off"
+                android:checked="true"
+                android:onClick="onSwitchRepeat"
+                android:layout_centerHorizontal="true"
+                />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:id="@+id/reminder_repeatIn_view"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/reminder_repeatIn_view_TV"
+                    android:text="Repeat Interval"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/reminder_repeatIn_Et"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="16dp"
+                    android:checked="true"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:hint="Set repeat"
+                    android:onClick="setRepeatNo"
+                    android:textColor="@color/azure"
+                    android:textSize="15dp"/>
+            </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/reminder_repeat_type"
+            android:clickable="true"
+            android:layout_gravity="center"
+            android:onClick="selectRepeatType"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:background="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/reminder_repeat_type_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:gravity="center"
+                android:text="Repeatition Type"
+                android:textColor="@color/material_on_background_emphasis_high_type"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/reminder_set_repeat_type"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="selectRepeatType"
+                android:text="Set Repition Type"
+                android:textColor="@color/material_on_background_emphasis_medium"
+                android:textSize="15dp" />
+        </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/reminder_add_view"
+        android:background="@drawable/dropshadow"/>
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:id="@+id/reminder_starred2"
+        android:clickable="true"
+        android:onClick="selectFab2"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="160dp"
+        app:fab_colorNormal="@color/medium_azure"
+        app:fab_colorPressed="@color/white"
+        app:fab_icon="@drawable/ic_action_notif2"
+        app:fabSize="normal"
+        android:layout_marginLeft="8dp"/>
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:id="@+id/reminder_starred1"
+        android:clickable="true"
+        android:onClick="selectFab1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="160dp"
+        app:fab_colorNormal="@color/red"
+        app:fab_colorPressed="@color/white"
+        app:fab_icon="@drawable/ic_action_nonotif"
+        app:fabSize="normal"
+        android:layout_marginLeft="8dp"/>
+</RelativeLayout>

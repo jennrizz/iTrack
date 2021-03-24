@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="2dp">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Enter Step Goal"
+        android:maxLength="6"
+        android:id="@+id/newStepET"
+        android:inputType="number"/>
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Done"
+        android:textColor="@color/black"
+        android:id="@+id/pedodialogDone"
+        android:layout_gravity="center"
+        android:textSize="10dp"
+        android:backgroundTint="@color/azure"/>
+</LinearLayout>

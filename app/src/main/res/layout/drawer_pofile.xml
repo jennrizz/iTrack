@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/baby_blue"
+    android:orientation="vertical"
+    tools:context=".drawerNav.drawerPofile">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="center"
+        android:background="@color/aliceBlue">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:alpha="0.1"
+            android:background="@drawable/imageprof" />
+
+        <TextView
+            android:id="@+id/prof_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="1"
+            android:text="Username"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/prof_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/prof_username"
+            android:text="email"
+            android:textSize="15dp" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="4dp"
+            android:id="@+id/ageCV">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:textSize="15dp"
+                    android:textColor="#a9a9a9"
+                    android:id="@+id/ageDis"
+                    android:text="Age"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:text="20dp"
+                    android:textColor="@color/black"
+                    android:layout_below="@id/ageDis"
+                    android:id="@+id/profageTV"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="4dp"
+            android:layout_marginTop="2dp"
+            android:id="@+id/cyclengthCV"
+            android:layout_below="@+id/ageCV">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:textSize="15dp"
+                    android:textColor="#a9a9a9"
+                    android:id="@+id/proflengthDis"
+                    android:text="Current Cycle Length"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:text="20dp"
+                    android:textColor="@color/black"
+                    android:id="@+id/proflengthTV"
+                    android:layout_below="@id/proflengthDis"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:padding="4dp"
+            android:layout_below="@id/cyclengthCV"
+            android:id="@+id/menPatCV"
+            android:layout_marginTop="2dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:textSize="15dp"
+                    android:textColor="#a9a9a9"
+                    android:id="@+id/profmenPatDIS"
+                    android:text="Menstrual Pattern"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:text="20dp"
+                    android:id="@+id/profmenspatTV"
+                    android:layout_below="@+id/profmenPatDIS"
+                    android:textColor="@color/black"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/medium_azure"
+            android:layout_below="@+id/menPatCV"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp">
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cylce Length"
+            android:textSize="20dp"
+            android:layout_marginLeft="25dp"
+            android:textColor="@color/black"/>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <Spinner
+            android:id="@+id/prof_avgCycleSpin"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@color/white"
+            android:layout_gravity="center"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp">
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Period Length"
+            android:textSize="20dp"
+            android:layout_marginLeft="25dp"
+            android:textColor="@color/black"/>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <Spinner
+            android:id="@+id/prof_periodLspin"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@color/white"
+            android:layout_gravity="center"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="If you regularly logged and update your period and data in the app, prediction will be based on it."
+        android:textStyle="italic"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="2dp"/>
+</LinearLayout>

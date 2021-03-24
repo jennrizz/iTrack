@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="86dp"
+    android:background="@color/baby_blue">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/design_default_color_primary_dark"
+            android:textSize="20dp"
+            android:text="Title"
+            android:id="@+id/reminder_rec_title"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:maxLines="2"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="15dp"
+            android:text="Date and time"
+            android:singleLine="true"
+            android:id="@+id/reminder_rec_dnt"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:maxLines="2"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="15dp"
+            android:text="Repeat Info"
+            android:singleLine="true"
+            android:id="@+id/reminder_rec_repeatInfo"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView_active"
+        android:src="@drawable/ic_action_notif"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:layout_centerVertical="true"
+        android:backgroundTint="@color/aliceBlue"
+        />
+
+</RelativeLayout>

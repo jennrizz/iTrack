@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1652969360",
+    "project_id": "itrack-firestore",
+    "storage_bucket": "itrack-firestore.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1652969360:android:aabf2eb183ce30f1f4ad15",
+        "android_client_info": {
+          "package_name": "com.example.itrack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1652969360-l6lqbtqgh16a5mo5hn6m2f6i7v57sphd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiiqmDgPIYzSO-2rhOTHZfFndN7GqqOyw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1652969360-l6lqbtqgh16a5mo5hn6m2f6i7v57sphd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/baby_blue"
+    tools:context=".pedometer.pedometerMain"
+     android:orientation="vertical">
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enable Pedometer"
+        android:id="@+id/pedoSwitch"
+        android:checked="false" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/pedo_main_view">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="15dp">
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/pedolineChart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.github.mikephil.charting.charts.LineChart>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:padding="2dp"
+        android:orientation="horizontal"
+        android:background="@color/medium_azure">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="000000"
+            android:id="@+id/stepTaken_text"
+            android:textColor="@color/black"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:text="/"
+            android:textColor="@color/black"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:id="@+id/editStepGoal"
+            android:text= "000000"
+            android:inputType="number"
+            android:layout_marginRight= "15dp"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/pedoEditIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_action_edit"
+            android:backgroundTint="@color/white" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/pedoCalTV"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:hint="Date"
+        android:textColor="@color/black"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="4dp"
+    android:background="@color/baby_blue">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Share with Practiontioner"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:id="@+id/shareDialogTitle"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="Enter email address of your Doctor"
+            android:layout_below="@+id/shareDialogTitle"
+            android:id="@+id/shareDialogSay"/>
+        <EditText
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:background="@color/aliceBlue"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/shareDialogSay"
+            android:hint="example@gmail.com"
+            android:id="@+id/shareDialogET"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shareDialogET"
+            android:layout_marginTop="2dp"
+            android:text="This will sen the app link"
+            android:layout_marginLeft="10dp"
+            android:textStyle="italic"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
