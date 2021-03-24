@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.provider.MediaStore
 import android.text.TextUtils
+import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
@@ -172,11 +173,7 @@ import kotlin.collections.HashMap
 
      // function save data to firestore
         fun saveDatatoFirestore(){
-
-            val userData = HashMap<String, Any>()
             var lperiodtext = lperiodTV.text.toString()
-
-
             // check if fields are null
             if(TextUtils.isEmpty(checkBoxtext) && checkBox.isChecked == false){
                 lperiodTV.setError("Check checkbox if you don't remember your last period date else enter date")
@@ -191,39 +188,30 @@ import kotlin.collections.HashMap
                 return
             }
 
-         auth.createUserWithEmailAndPassword(email, pass)
-                 .addOnCompleteListener{task ->
-                     if(task.isSuccessful){
-                         userId = auth.currentUser!!.uid
-                         val firebaseUser = auth.currentUser!!
-                         firebaseUser.sendEmailVerification().addOnSuccessListener {
-                         }
-                         Toast.makeText(this, "User Created", Toast.LENGTH_SHORT).show()
 
-                         documentRefrence = fstore.collection("userData").document(userId)
-                         val userData = HashMap<String, Any>()
-                         userData.put("email", email)
-                         userData.put("username", username)
-                         userData.put("lperiodday", checkBoxtext)
-                         userData.put("age", ageEditText.text.toString())
-                         userData.put("menstrual pattern", menstrualPattern)
-                         userData.put("avgCycle", avgCycle.toString())
-                         userData.put("periodLength", "5")
-                         documentRefrence.set(userData).addOnSuccessListener {
+         userId = auth.currentUser!!.uid
+         val firebaseUser = auth.currentUser!!
+         firebaseUser.sendEmailVerification().addOnSuccessListener {
+         }
+         Toast.makeText(this, "User Created", Toast.LENGTH_SHORT).show()
+         Log.d("$userId", userId)
+         Log.d("$email", email)
+         Log.d("$pass", "$pass")
+         documentRefrence = fstore.collection("userData").document(userId)
+         val userData = HashMap<String, Any>()
+         userData.put("email", email)
+         userData.put("username", username)
+         userData.put("lperiodday", checkBoxtext)
+         userData.put("age", ageEditText.text.toString())
+         userData.put("menstrual pattern", menstrualPattern)
+         userData.put("avgCycle", avgCycle.toString())
+         userData.put("periodLength", "5")
+         documentRefrence.set(userData)
 
-                         }
-                     }
-                     else{
-                         Toast.makeText(this, "Error Message: " + task.exception!!.message.toString(), Toast.LENGTH_SHORT).show()
-                     }
-                 }
-
-            val intent = Intent(this, Home::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
-            startActivity(intent)
-
+        val intent = Intent(this, Home::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+        startActivity(intent)
         }
 }
 

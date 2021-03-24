@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -86,20 +87,30 @@ class CreateAcc : AppCompatActivity() {
             return
         }
 
+        auth.createUserWithEmailAndPassword(usernametxt, passtxt).addOnCompleteListener{task ->
+                    if(task.isSuccessful){
+                        val userId = auth.currentUser!!.uid
+                        val firebaseUser = auth.currentUser!!
+                        firebaseUser.sendEmailVerification().addOnSuccessListener {
+                        }
+                        Toast.makeText(this, "User Authenticated", Toast.LENGTH_SHORT).show()
+                    }
+                    else{
+                        Toast.makeText(this, "Error Message: " + task.exception!!.message.toString(), Toast.LENGTH_SHORT).show()
+                    }
+                }
         val intent = Intent(applicationContext, startInformation::class.java)
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         intent.putExtra("email", usernametxt)
         intent.putExtra("pass", passtxt)
         intent.putExtra("username", usertxt)
+        Log.d("Create Acc", "$usernametxt, $passtxt, $usertxt")
         startActivity(intent)
 
     }
 
     fun goTologin(view: View) {
         val intent = Intent(applicationContext, login::class.java)
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intent)
     }
     fun String.isEmailValid():Boolean{

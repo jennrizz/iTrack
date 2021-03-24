@@ -53,8 +53,12 @@ class Home() : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListe
         auth = FirebaseAuth.getInstance()
         fstore = FirebaseFirestore.getInstance()
 
-        val userid = auth.currentUser!!.uid
+        val user = auth.currentUser!!
+        val userid = user.uid
+
+
         docRef = fstore.collection("userData").document(userid)
+
         drawLayout = findViewById(R.id.draw_layout)
         drawerNav = findViewById(R.id.nav_view)
         bottomNav = findViewById(R.id.bottomNav)
@@ -81,6 +85,7 @@ class Home() : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListe
             }
             true
         }
+
         docRef.addSnapshotListener {
             documentSnapshot, e ->
             if(documentSnapshot !=null) {
