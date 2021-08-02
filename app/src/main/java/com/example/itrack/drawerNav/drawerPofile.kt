@@ -83,6 +83,11 @@ class drawerPofile : AppCompatActivity() {
                     cyclelengthTextView.text = item
                     docRef.update(userData)
                 }
+                Toast.makeText(
+                        applicationContext,
+                        "This action autmatically change values",
+                        Toast.LENGTH_SHORT
+                ).show()
             }
             override fun onNothingSelected(p0: AdapterView<*>?) {
                 TODO("Not yet implemented")
@@ -111,6 +116,11 @@ class drawerPofile : AppCompatActivity() {
                     userData.put("periodLength", item.toString())
                     docRef.update(userData)
                 }
+                Toast.makeText(
+                        applicationContext,
+                        "This action autmatically change values",
+                        Toast.LENGTH_SHORT
+                ).show()
             }
             override fun onItemClick(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
                 Toast.makeText(

@@ -24,6 +24,7 @@ import java.nio.MappedByteBuffer
 import java.nio.channels.FileChannel
 import java.text.SimpleDateFormat
 import java.time.LocalDate
+import java.time.Month
 import java.time.format.DateTimeFormatter.ofPattern
 import java.util.*
 import kotlin.collections.ArrayList
@@ -115,7 +116,6 @@ class CalendarFragment : Fragment(R.layout.fragment_calendar) {
                     isValidLastPeriodValid = false
                 }else{
                     date = LocalDate.parse(dateRet, ofPattern("yyyy-MM-dd"))
-                    Toast.makeText(context, "$date", Toast.LENGTH_SHORT).show()
                     if (user_avg_cycle > 0 && isValidLastPeriodValid) {
                     calendarView.datesIndicators = generateCycle(date,user_period_length)
                     }
@@ -148,31 +148,30 @@ class CalendarFragment : Fragment(R.layout.fragment_calendar) {
 
     //generate marks
     @RequiresApi(Build.VERSION_CODES.O)
-    private fun generateCycle(user_period_date: LocalDate,userPeriodLength: Int): List<EventCalendarCycle>{
+    private fun generateCycle(user_period_date: LocalDate,userPeriodLength: Int): List<EventCalendarCycle> {
         val eventItems = mutableListOf<EventCalendarCycle>()
         val context = requireContext()
-        val months_to_Indicate = 0..4
+        val months_to_Indicate = 0..5
 
         var NEXTPERIODDAY = user_period_date
 
 
-        for(i in months_to_Indicate){
-            var PERIODRANGE = DateProgression(NEXTPERIODDAY, NEXTPERIODDAY.plusDays(userPeriodLength.toLong()),1)
+        for (i in months_to_Indicate) {
+            var PERIODRANGE = DateProgression(NEXTPERIODDAY, NEXTPERIODDAY.plusDays(userPeriodLength.toLong()), 1)
             var OVULATIONDAY = NEXTPERIODDAY.minusDays(14)
-            var FIRSTFERTILEDAY = NEXTPERIODDAY.minusDays( 18.toLong())
+            var FIRSTFERTILEDAY = NEXTPERIODDAY.minusDays(18.toLong())
             var LASTFERTILEDAY = NEXTPERIODDAY.minusDays(11.toLong())
-            var FERTILERANGE = DateProgression(FIRSTFERTILEDAY, LASTFERTILEDAY,1)
+            var FERTILERANGE = DateProgression(FIRSTFERTILEDAY, LASTFERTILEDAY, 1)
 
-            if(NEXTPERIODDAY == user_period_date){
+            if (NEXTPERIODDAY == user_period_date) {
                 eventItems += EventCalendarCycle(
                         eventName = "Last Period Day",
                         date = CalendarDate(sdf.parse(NEXTPERIODDAY.toString()).time),
                         color = context.getColorInt(R.color.red)
                 )
-            }
-            else if (NEXTPERIODDAY != user_period_date){
+            } else if (NEXTPERIODDAY != user_period_date) {
                 for (pDays in PERIODRANGE) {
-                    if(pDays == NEXTPERIODDAY){
+                    if (pDays == NEXTPERIODDAY) {
                         eventItems += EventCalendarCycle(
                                 eventName = "Expected Next Period Day",
                                 date = CalendarDate(sdf.parse(pDays.toString()).time),
@@ -181,8 +180,7 @@ class CalendarFragment : Fragment(R.layout.fragment_calendar) {
                                 eventName = " ",
                                 date = CalendarDate(sdf.parse(pDays.toString()).time),
                                 color = context.getColorInt(R.color.red))
-                    }
-                    else {
+                    } else {
                         eventItems += EventCalendarCycle(
                                 eventName = "Expected Period Day",
                                 date = CalendarDate(sdf.parse(pDays.toString()).time),
@@ -191,42 +189,50 @@ class CalendarFragment : Fragment(R.layout.fragment_calendar) {
                     }
                 }
             }
+                for (fDays in FERTILERANGE step 1) {
+                    if (NEXTPERIODDAY == user_period_date) {
+                        break
+                    }
+                    if (fDays == OVULATIONDAY) {
+                        eventItems += EventCalendarCycle(
+                                eventName = "Ovulation Day",
+                                date = CalendarDate(sdf.parse(fDays.toString()).time),
+                                color = context.getColorInt(R.color.ferttileColor)
+                        )
+                        eventItems += EventCalendarCycle(
+                                eventName = " ",
+                                date = CalendarDate(sdf.parse(fDays.toString()).time),
+                                color = context.getColorInt(R.color.ferttileColor)
+                        )
+                    } else if (fDays !in PERIODRANGE) {
+                        eventItems += EventCalendarCycle(eventName = "High Chance of Getting Pregnant",
+                                date = CalendarDate(sdf.parse(fDays.toString()).time),
+                                color = context.getColorInt(R.color.ferttileColor)
+                        )
+                    }
+                }
 
-            for (fDays in FERTILERANGE step 1){
-                if(NEXTPERIODDAY == user_period_date){
-                    break
+                var nextMonth = NEXTPERIODDAY.plusMonths(1).month
+                var prediction = abs(inference(user_age, user_avg_cycle, NEXTPERIODDAY.dayOfMonth.toFloat()))
+
+                Toast.makeText(getContext(), "${prediction.toInt()},$nextMonth", Toast.LENGTH_SHORT).show()
+
+                if (prediction > 30) {
+                    prediction = prediction - 30
+                } else if (prediction < 1) {
+                    prediction = 1f
                 }
-                if (fDays == OVULATIONDAY){
-                    eventItems += EventCalendarCycle(
-                            eventName = "Ovulation Day",
-                            date = CalendarDate(sdf.parse(fDays.toString()).time),
-                            color = context.getColorInt(R.color.ferttileColor)
-                    )
-                    eventItems += EventCalendarCycle(
-                            eventName = " ",
-                            date = CalendarDate(sdf.parse(fDays.toString()).time),
-                            color = context.getColorInt(R.color.ferttileColor)
-                    )
+
+                if (nextMonth == Month.DECEMBER) {
+                    NEXTPERIODDAY = LocalDate.of(2022, nextMonth, prediction.toInt())
+                } else {
+                    NEXTPERIODDAY = LocalDate.of(2021, nextMonth, prediction.toInt())
                 }
-                else {
-                    eventItems += EventCalendarCycle(
-                            eventName = "High Chance of Getting Pregnant",
-                            date = CalendarDate(sdf.parse(fDays.toString()).time),
-                            color = context.getColorInt(R.color.ferttileColor)
-                    )
-                }
+
+
             }
-            var nextMonth = NEXTPERIODDAY.plusMonths(1).month
-            var prediction = abs(inference(user_age,user_avg_cycle, NEXTPERIODDAY.dayOfMonth.toFloat()))
-            if (prediction > 30){
-                prediction = prediction - 30
-                nextMonth = nextMonth.plus(1.toLong())
-            }
-            NEXTPERIODDAY = LocalDate.of(2021, nextMonth, prediction.toInt())
-        }
-        return eventItems
+            return eventItems
     }
-
     private fun showDialogWithEventsForSpecificDate(date: CalendarDate){
         val eventItems = calendarView.getDateIndicators(date)
                 .filterIsInstance<EventCalendarCycle>()
