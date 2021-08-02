@@ -218,12 +218,16 @@ class CalendarFragment : Fragment(R.layout.fragment_calendar) {
             }
             var nextMonth = NEXTPERIODDAY.plusMonths(1).month
             var prediction = abs(inference(user_age,user_avg_cycle, NEXTPERIODDAY.dayOfMonth.toFloat()))
+            if (prediction > 30){
+                prediction = prediction - 30
+                nextMonth = nextMonth.plus(1.toLong())
+            }
             NEXTPERIODDAY = LocalDate.of(2021, nextMonth, prediction.toInt())
         }
         return eventItems
     }
 
-    private fun showDialogWithEventsForSpecificDate(date: CalendarDate) {
+    private fun showDialogWithEventsForSpecificDate(date: CalendarDate){
         val eventItems = calendarView.getDateIndicators(date)
                 .filterIsInstance<EventCalendarCycle>()
                 .toTypedArray()
