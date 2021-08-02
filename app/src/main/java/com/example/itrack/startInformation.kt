@@ -162,56 +162,63 @@ import kotlin.collections.HashMap
         }
 
 
-        fun hideRadioGroup(){
-            val rGroup = findViewById<RadioGroup>(R.id.rGroup)
-            rGroup.visibility = View.INVISIBLE
-        }
-        fun showRadioGroup(){
-            val rGroup = findViewById<RadioGroup>(R.id.rGroup)
-            rGroup.visibility = View.VISIBLE
-        }
+    fun hideRadioGroup(){
+        val rGroup = findViewById<RadioGroup>(R.id.rGroup)
+        rGroup.visibility = View.INVISIBLE
+    }
+    fun showRadioGroup(){
+        val rGroup = findViewById<RadioGroup>(R.id.rGroup)
+        rGroup.visibility = View.VISIBLE
+    }
 
      // function save data to firestore
-        fun saveDatatoFirestore(){
-            var lperiodtext = lperiodTV.text.toString()
-            // check if fields are null
-            if(TextUtils.isEmpty(checkBoxtext) && checkBox.isChecked == false){
-                lperiodTV.setError("Check checkbox if you don't remember your last period date else enter date")
-                return
-            }
-            if(TextUtils.isEmpty(ageEditText.text.toString())){
-                ageEditText.setError("Age is Required")
-                return
-            }
-            if (radioGroup.checkedRadioButtonId == -1 && avgCycle == "None"){
-                Toast.makeText(applicationContext, "You selected $cyclePostion choose one from the provided choices", Toast.LENGTH_SHORT).show()
-                return
-            }
-
-
-         userId = auth.currentUser!!.uid
-         val firebaseUser = auth.currentUser!!
-         firebaseUser.sendEmailVerification().addOnSuccessListener {
-         }
-         Toast.makeText(this, "User Created", Toast.LENGTH_SHORT).show()
-         Log.d("$userId", userId)
-         Log.d("$email", email)
-         Log.d("$pass", "$pass")
-         documentRefrence = fstore.collection("userData").document(userId)
-         val userData = HashMap<String, Any>()
-         userData.put("email", email)
-         userData.put("username", username)
-         userData.put("lperiodday", checkBoxtext)
-         userData.put("age", ageEditText.text.toString())
-         userData.put("menstrual pattern", menstrualPattern)
-         userData.put("avgCycle", avgCycle.toString())
-         userData.put("periodLength", "5")
-         documentRefrence.set(userData)
-
-        val intent = Intent(this, Home::class.java)
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
-        startActivity(intent)
+    fun saveDatatoFirestore(){
+        var lperiodtext = lperiodTV.text.toString()
+        // check if fields are null
+        if(TextUtils.isEmpty(checkBoxtext) && checkBox.isChecked == false){
+            lperiodTV.setError("Check checkbox if you don't remember your last period date else enter date")
+            return
         }
+        if(TextUtils.isEmpty(ageEditText.text.toString())){
+            ageEditText.setError("Age is Required")
+            return
+        }
+        if (radioGroup.checkedRadioButtonId == -1 && avgCycle == "None"){
+            Toast.makeText(applicationContext, "You selected $cyclePostion choose one from the provided choices", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+         auth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener{task ->
+             if(task.isSuccessful){
+                 val userId = auth.currentUser!!.uid
+                 val firebaseUser = auth.currentUser!!
+                 firebaseUser.sendEmailVerification().addOnSuccessListener {
+
+                 }
+
+                 Toast.makeText(this, "User Created", Toast.LENGTH_SHORT).show()
+                 documentRefrence = fstore.collection("userData").document(userId)
+                 val userData = HashMap<String, Any>()
+                 userData.put("email", email)
+                 userData.put("username", username)
+                 userData.put("lperiodday", checkBoxtext)
+                 userData.put("age", ageEditText.text.toString())
+                 userData.put("menstrual pattern", menstrualPattern)
+                 userData.put("avgCycle", avgCycle.toString())
+                 userData.put("periodLength", "5")
+                 documentRefrence.set(userData)
+
+
+                 val intent = Intent(this, Home::class.java)
+                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+                 startActivity(intent)
+             }
+
+             else{
+                 Toast.makeText(this, "Error Message: " + task.exception!!.message.toString(), Toast.LENGTH_SHORT).show()
+             }
+         }
+    }
 }
 

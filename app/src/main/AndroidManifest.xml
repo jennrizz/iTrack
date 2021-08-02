@@ -49,7 +49,7 @@
             android:name=".reminder.ReminderAlarmService"
             android:exported="false"
             android:enabled="true"/>
-        <receiver android:name=".reminder.reminderAdd$Reciever"/>
+
     </application>
 
 </manifest>

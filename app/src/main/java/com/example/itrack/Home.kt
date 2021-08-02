@@ -40,9 +40,15 @@ class Home() : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListe
     lateinit var auth: FirebaseAuth
     lateinit var fstore: FirebaseFirestore
     lateinit var docRef:DocumentReference
+
+    private var user_age = 0.0f
+    private var user_pattern = " "
+    private var user_avg_cycle = 0.0f
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+
 
 
         // set toolbar
@@ -66,17 +72,31 @@ class Home() : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListe
         communityFragment = communityFragment()
         graphDataFragment = graphDataFragment()
 
-
-
-
         //handling of navigation drawer
         actionBarDrawer()
         drawerNav.setNavigationItemSelectedListener(this)
         val navheader = drawerNav.getHeaderView(0)
         usernameText = navheader.findViewById(R.id.home_username)
 
+        docRef.addSnapshotListener {
+                documentSnapshot, e ->
+            if(documentSnapshot !=null) {
+                var usernametxt = documentSnapshot!!.getString("username")
+                usernameText.text = usernametxt
+                var user_age = documentSnapshot!!.getString("age").toString().toFloat()
+                var user_pattern = documentSnapshot!!.getString("menstrual pattern").toString()
+                var user_avg_cycle = documentSnapshot!!.getString("avgCycle").toString().toFloat()
+                var user_period_length = documentSnapshot!!.getString("periodLength").toString().toInt()
+                var user_last_period_date =  documentSnapshot!!.getString("lperiodday").toString()
+            }
+            else{
+                usernameText.text = " "
+            }
+        }
+
         //bottom fragment commits
         currenBottomFragment(calendarFragment)
+
         bottomNav.setOnNavigationItemSelectedListener {
             when(it.itemId){
                 R.id.bottomNav_calendar -> currenBottomFragment(calendarFragment)
@@ -86,16 +106,7 @@ class Home() : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListe
             true
         }
 
-        docRef.addSnapshotListener {
-            documentSnapshot, e ->
-            if(documentSnapshot !=null) {
-                var usernametxt = documentSnapshot!!.getString("username")
-                usernameText.text = usernametxt
-            }
-            else{
-                usernameText.text = " "
-            }
-        }
+
     }
     // toggle drawer
     private fun actionBarDrawer(){

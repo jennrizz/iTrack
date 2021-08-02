@@ -65,10 +65,11 @@ class drawer_signout : Fragment() {
         dialogView.findViewById<Button>(R.id.signout_yes).setOnClickListener {
             //userEmail = view.findViewById<EditText>(R.id.reEmail).text.toString()
             alertDialog.dismiss()
-            auth.signOut()
             val intent = Intent(activity, CreateAcc::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             startActivity(intent)
+            auth.signOut()
         }
         dialogView.findViewById<Button>(R.id.signout_no).setOnClickListener {
             alertDialog.dismiss()

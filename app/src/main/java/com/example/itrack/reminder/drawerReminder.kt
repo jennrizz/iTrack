@@ -57,8 +57,8 @@ class drawerReminder() : AppCompatActivity(), LoaderManager.LoaderCallbacks<Curs
             startActivity(intent)
         }
         addButton.setOnClickListener { v->
-            //val intent = Intent(v.getContext(), reminderAdd::class.java)
-            //startActivity(intent)
+         //   val intent = Intent(v.getContext(), reminderAdd::class.java)
+           // startActivity(intent)
             addReminderTittle()
         }
         supportLoaderManager.initLoader(REMINDER_LOADER,null, this)

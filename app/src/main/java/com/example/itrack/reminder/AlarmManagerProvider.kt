@@ -16,20 +16,19 @@ import java.lang.IllegalStateException
 var sManager : AlarmManager? = null
 class AlarmManagerProvider {
     private val TAG = AlarmManagerProvider::class.simpleName
-
-    object Singleton{
-        fun injectAlarmManager(alarmManager: AlarmManager) {
-            if (sManager != null) {
-                throw IllegalStateException("Alarm Manager Already Set")
+    class Singleton {
+            fun injectAlarmManager(alarmManager: AlarmManager) {
+                if (sManager != null) {
+                    throw IllegalStateException("Alarm Manager Already Set")
+                }
+                sManager = alarmManager
             }
-            sManager = alarmManager
-        }
 
-        fun getAlarmManager(context: Context): AlarmManager {
-            if (sManager == null) {
-                sManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-            }
-            return sManager!!
+            fun getAlarmManager(context: Context): AlarmManager {
+                if (sManager == null) {
+                    sManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+                }
+                return sManager!!
         }
     }
 }

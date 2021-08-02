@@ -21,11 +21,12 @@ class ReminderAlarmService: IntentService("ReminderAlarmService") {
     open val TAG = AlarmManagerProvider::class.simpleName
 
     object Singleton{
+
     fun getReminderPendingIntent(context: Context, uri: Uri): PendingIntent{
         val action = Intent(context, ReminderAlarmService::class.java)
         action.setData(uri)
         return  PendingIntent.getService(context,0,action,PendingIntent.FLAG_UPDATE_CURRENT)
-        }
+    }
     }
 
 

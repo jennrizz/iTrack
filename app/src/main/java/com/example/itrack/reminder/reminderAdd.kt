@@ -1,47 +1,35 @@
 package com.example.itrack.reminder
 
 
-import android.app.AlarmManager
-import android.app.NotificationManager
-import android.app.PendingIntent
+import android.app.*
 import android.content.*
 import android.database.Cursor
 import android.net.Uri
-import android.net.sip.SipManager.newInstance
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
-import android.os.Vibrator
-import android.provider.Settings
 import android.text.Editable
 import android.text.InputType
 import android.text.TextWatcher
 import android.view.Menu
 import android.view.MenuItem
-import android.view.MotionEvent
 import android.view.View
 import android.widget.*
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.widget.DialogTitle
 import androidx.loader.app.LoaderManager
 import androidx.loader.content.Loader
 import com.example.itrack.R
 import com.getbase.floatingactionbutton.FloatingActionButton
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.NavUtils
-import androidx.core.app.NotificationCompat
-import androidx.core.app.NotificationManagerCompat
-import androidx.core.net.toUri
-import androidx.fragment.app.FragmentManager
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog
-import com.example.itrack.reminder.drawerReminder
 
-import com.wdullaer.materialdatetimepicker.time.RadialPickerLayout
+import java.time.LocalDateTime
+import java.time.ZoneOffset
+import java.time.format.DateTimeFormatter
 import java.util.*
-import java.util.Date.from
-import kotlin.math.min
-
 
 
 class reminderAdd : AppCompatActivity(), TimePickerDialog.OnTimeSetListener, DatePickerDialog.OnDateSetListener, LoaderManager.LoaderCallbacks<Cursor> {
@@ -80,7 +68,7 @@ class reminderAdd : AppCompatActivity(), TimePickerDialog.OnTimeSetListener, Dat
     lateinit var mRepeatIn_str: String
     lateinit var mRepeatType_str: String
     lateinit var mActive: String
-
+    var datenTime : Long? = null
     private var mCurrentUri : Uri? = null
     var mReminderChanged = false
 
@@ -101,70 +89,70 @@ class reminderAdd : AppCompatActivity(), TimePickerDialog.OnTimeSetListener, Dat
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.reminder_add)
+            super.onCreate(savedInstanceState)
+            setContentView(R.layout.reminder_add)
 
-        var supportloaderManager: LoaderManager = supportLoaderManager
+            var supportloaderManager: LoaderManager = supportLoaderManager
 
 
-        val intent = getIntent()
-        mCurrentUri = intent.data
+            val intent = getIntent()
+            mCurrentUri = intent.data
 
-        if (intent == null) {
-            setTitle("Add Reminder Details")
-            invalidateOptionsMenu()
-        } else {
-            setTitle("Edit Reminder")
-            supportloaderManager!!.initLoader(EXISTING_REMINDER_LOADER, null, this);
-        }
-
-        mDateText = findViewById(R.id.reminder_date_ET)
-        mTimeText = findViewById(R.id.reminder_time_ET)
-        mRepeatIn = findViewById(R.id.reminder_repeatIn_Et)
-        mRepeatType = findViewById(R.id.reminder_set_repeat_type)
-        mRepeatText = findViewById(R.id.reminder_repeat_text)
-        mRepeatSwitch = findViewById(R.id.reminder_repeat_view_switch)
-        mFab1 = findViewById(R.id.reminder_starred1)
-        mFab2 = findViewById(R.id.reminder_starred2)
-        mTitleText = findViewById(R.id.reminder_title_ET)
-
-        mActive = "true"
-        mRepeat = "true"
-        mRepeatType_str = "Set Type"
-        mCalendar = Calendar.getInstance()
-        mHour = mCalendar.get(Calendar.HOUR_OF_DAY)
-        mMinute = mCalendar.get(Calendar.MINUTE)
-        mMonth = mCalendar.get(Calendar.MONTH) + 1
-        mYear = mCalendar.get(Calendar.YEAR)
-        mDay = mCalendar.get(Calendar.DATE)
-        mTime = mHour.toString() + ":" + mMinute
-
-        if (mDay.toString().length <= 1 && mMonth.toString().length <= 1) {
-            var mddaystr = "$0$mDay"
-            var mmonth = "0$mMonth"
-            mDate = mddaystr + "/" + mmonth + "/" + mYear
-        } else if (mDay.toString().length > 1 && mMonth.toString().length <= 1) {
-            var mmonth = "0$mMonth"
-            mDate = mDay.toString() + "/" + mmonth + "/" + mYear
-        } else if (mDay.toString().length <= 1 && mMonth.toString().length > 1) {
-            var mddaystr = "$0$mDay"
-            mDate = mddaystr.toString() + "/" + mMonth + "/" + mYear
-        }
-
-        mTitleText.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(p0: Editable?) {}
-            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-                mTitle = p0.toString().trim()
-                mTitleText.setError(null)
+            if (intent == null) {
+                setTitle("Add Reminder Details")
+                invalidateOptionsMenu()
+            } else {
+                setTitle("Edit Reminder")
+                supportloaderManager!!.initLoader(EXISTING_REMINDER_LOADER, null, this);
             }
 
-            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
-        })
+            mDateText = findViewById(R.id.reminder_date_ET)
+            mTimeText = findViewById(R.id.reminder_time_ET)
+            mRepeatIn = findViewById(R.id.reminder_repeatIn_Et)
+            mRepeatType = findViewById(R.id.reminder_set_repeat_type)
+            mRepeatText = findViewById(R.id.reminder_repeat_text)
+            mRepeatSwitch = findViewById(R.id.reminder_repeat_view_switch)
+            mFab1 = findViewById(R.id.reminder_starred1)
+            mFab2 = findViewById(R.id.reminder_starred2)
+            mTitleText = findViewById(R.id.reminder_title_ET)
+
+            mActive = "true"
+            mRepeat = "true"
+
+            mRepeatType_str = " "
+            mCalendar = Calendar.getInstance()
+            mHour = mCalendar.get(Calendar.HOUR_OF_DAY)
+            mMinute = mCalendar.get(Calendar.MINUTE)
+            mMonth = mCalendar.get(Calendar.MONTH) + 1
+            mYear = mCalendar.get(Calendar.YEAR)
+            mDay = mCalendar.get(Calendar.DATE)
+            mTime = mHour.toString() + ":" + mMinute
+
+            if (mDay.toString().length <= 1 && mMonth.toString().length <= 1) {
+                var mddaystr = "0$mDay"
+                var mmonth = "0$mMonth"
+                mDate = mddaystr + "/" + mmonth + "/" + mYear
+            } else if (mDay.toString().length > 1 && mMonth.toString().length <= 1) {
+                var mmonth = "0$mMonth"
+                mDate = mDay.toString() + "/" + mmonth + "/" + mYear
+            } else if (mDay.toString().length <= 1 && mMonth.toString().length > 1) {
+                var mddaystr = "0$mDay"
+                mDate = mddaystr.toString() + "/" + mMonth + "/" + mYear
+            }
+
+            mTitleText.addTextChangedListener(object : TextWatcher {
+                override fun afterTextChanged(p0: Editable?) {}
+                override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                    mTitle = p0.toString().trim()
+                    mTitleText.setError(null)
+                }
+
+                override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}
+            })
 
 
-        mRepeatIn_str = 1.toString()
-        var loadCursor = contentResolver.query(mCurrentUri!!, null, null, null, null)!!
-            if(loadCursor.moveToFirst()){
+            var loadCursor = contentResolver.query(mCurrentUri!!, null, null, null, null)!!
+            if(loadCursor.moveToFirst() && loadCursor != null){
             val titleColumnIndex = loadCursor.getColumnIndex(AlarmReminderContract.AlermReminderEntry().KEY_TITLE)
             val dateColumnIndex = loadCursor.getColumnIndex(AlarmReminderContract.AlermReminderEntry().KEY_DATE)
             val timeColumnIndex = loadCursor.getColumnIndex(AlarmReminderContract.AlermReminderEntry().KEY_TIME)
@@ -179,10 +167,7 @@ class reminderAdd : AppCompatActivity(), TimePickerDialog.OnTimeSetListener, Dat
             val repeatNo = loadCursor.getString(repeatNoColumnIndex)
             val repeatType = loadCursor.getString(repeatTypeColumnIndex)
             val active = loadCursor.getString(activeColumnIndex)
-
-
             mTitleText.setText(title)
-
             if (date != null) {
                 mDateText.setText(date)
             }else{
@@ -195,26 +180,39 @@ class reminderAdd : AppCompatActivity(), TimePickerDialog.OnTimeSetListener, Dat
             }
 
             if(repeatNo != null){
-                mRepeatIn.setText(repeatNo)}else{
-                mRepeatIn.setText(mRepeat)
+                mRepeatIn.setText(repeatNo)
+                mRepeatIn_str = repeatNo
+            }else{
+                mRepeatIn_str = 1.toString()
+                mRepeatIn.setText(mRepeatIn_str)
             }
+
             if (repeatType != null){
                 mRepeatType.setText(repeatType)
+                mRepeatIn_str = repeatType
             }else{
+                mRepeatType_str = "Set Repeat Type"
                 mRepeatType.setText(mRepeatType_str)
             }
-            mRepeatText.setText("Every $mRepeatIn_str $mRepeatType_str(s)")
-            mActive = active
-
+            if(mRepeatIn.text.toString() != null && mRepeatType.text.toString() != null){
+                mRepeatText.setText("Every ${mRepeatIn.text.toString()} ${mRepeatType.text.toString()}(s)")}
+            else{
+                mRepeatText.setText("Repeat Off")
+            }
+            if (active != null) {
+                mActive = active
+            }else{
+                mActive = "false"
+            }
             if (repeat != null) {
                 if (repeat.equals("false")) {
-                    mRepeatSwitch.isChecked == false
+                    mRepeatSwitch.setChecked(false)
                     mRepeatText.setText("Off")
                 } else if (repeat.equals("true")) {
-                    mRepeatSwitch.isChecked == true
+                    mRepeatSwitch.setChecked(true)
                 }
             }else{
-                mRepeatType.setText("Set repeat type")
+                mRepeatText.setText("Off")
             }
         }
 
@@ -241,6 +239,7 @@ class reminderAdd : AppCompatActivity(), TimePickerDialog.OnTimeSetListener, Dat
         outState.putCharSequence(KEY_REPEAT_TYPE, mRepeatType.text)
         outState.putCharSequence(KEY_ACTIVE, mActive)
     }
+
     fun selectFab1(view: View) {
         mFab1.visibility = View.GONE
         mFab2.visibility = View.VISIBLE
@@ -278,12 +277,12 @@ class reminderAdd : AppCompatActivity(), TimePickerDialog.OnTimeSetListener, Dat
             val repeatNoColumnIndex = data.getColumnIndex(AlarmReminderContract.AlermReminderEntry().KEY_REPEAT_NO)
             val repeatTypeColumnIndex = data.getColumnIndex(AlarmReminderContract.AlermReminderEntry().KEY_REPEAT_TYPE)
             val activeColumnIndex = data.getColumnIndex(AlarmReminderContract.AlermReminderEntry().KEY_ACTIVE)
-        }
+
+            val repeat = data.getString(repeatColumnIndex)
+       }
     }
 
-    override fun onLoaderReset(loader: Loader<Cursor>) {
-        TODO("Not yet implemented")
-    }
+    override fun onLoaderReset(loader: Loader<Cursor>) {}
 
     fun selectRepeatType(view: View) {
         var items = arrayOf("Minute","Hour","Day","Week","Month")
@@ -293,29 +292,66 @@ class reminderAdd : AppCompatActivity(), TimePickerDialog.OnTimeSetListener, Dat
         builder.setItems(items,DialogInterface.OnClickListener { _, which ->
             mRepeatType_str = items[which]
             mRepeatType.setText(mRepeatType_str)
-            mRepeatText.setText("Every $mRepeatIn_str $mRepeatType_str(s)")
+            mRepeatText.setText("Every ${mRepeatIn.text.toString()}${mRepeatType.text.toString()}(s)")
         })
         val alert = builder.create()
         alert.show()
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     fun setTime(view: View) {
-        val cal = Calendar.getInstance()
-        var tpd= TimePickerDialog.newInstance( this,
-            cal.get(Calendar.HOUR_OF_DAY),
-            cal.get(Calendar.MINUTE),
-            false)
-        tpd.isThemeDark=false
-        tpd.show(getFragmentManager(),"TimepickerDialog")
+        var loadCursor = contentResolver.query(mCurrentUri!!, null, null, null, null)!!
+        if(loadCursor.moveToFirst()){
+            val timeColumnIndex = loadCursor.getColumnIndex(AlarmReminderContract.AlermReminderEntry().KEY_TIME)
+            val dateColumnIndex = loadCursor.getColumnIndex(AlarmReminderContract.AlermReminderEntry().KEY_DATE)
+            var date = loadCursor.getString(dateColumnIndex)
+            var time = loadCursor.getString(timeColumnIndex)
+            val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")
+
+            val str = "$date $time"
+            if(time!=null){
+                val dateTime  = LocalDateTime.parse(str, formatter)
+
+                var tpd = TimePickerDialog.newInstance(this,
+                        dateTime.hour,
+                        dateTime.minute,
+                false)
+                tpd.isThemeDark = false
+                tpd.show(getFragmentManager(), "TimepickerDialog")
+                datenTime = dateTime.toInstant(ZoneOffset.UTC).toEpochMilli()
+            }  else{
+                val cal = Calendar.getInstance()
+                var tpd= TimePickerDialog.newInstance( this,
+                        cal.get(Calendar.HOUR_OF_DAY),
+                        cal.get(Calendar.MINUTE),
+                        false)
+                tpd.isThemeDark=false
+                tpd.show(getFragmentManager(),"TimepickerDialog")
+                datenTime = cal.timeInMillis
+            }
+        }
     }
+    @RequiresApi(Build.VERSION_CODES.O)
     fun setDate(view: View) {
-        val cal = Calendar.getInstance()
-        var dpd= DatePickerDialog.newInstance( this,
-            cal.get(Calendar.YEAR),
-            cal.get(Calendar.MONTH),
-            cal.get(Calendar.DAY_OF_MONTH)
-        )
-        dpd.show(getFragmentManager(), "Datapickerdialog")
+        var loadCursor = contentResolver.query(mCurrentUri!!, null, null, null, null)!!
+        if(loadCursor.moveToFirst()){
+            val timeColumnIndex = loadCursor.getColumnIndex(AlarmReminderContract.AlermReminderEntry().KEY_TIME)
+            val dateColumnIndex = loadCursor.getColumnIndex(AlarmReminderContract.AlermReminderEntry().KEY_DATE)
+            var date = loadCursor.getString(dateColumnIndex)
+            var time = loadCursor.getString(timeColumnIndex)
+
+            val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")
+            val str = "$date $time"
+
+            val cal = Calendar.getInstance()
+            var dpd = DatePickerDialog.newInstance(this,
+                    cal.get(Calendar.YEAR),
+                    cal.get(Calendar.MONTH),
+                    cal.get(Calendar.DAY_OF_MONTH)
+            )
+            dpd.show(getFragmentManager(), "Datapickerdialog")
+
+        }
     }
 
     override fun onTimeSet(view: TimePickerDialog, hourOfDay: Int, minute: Int, second: Int) {
@@ -335,14 +371,14 @@ class reminderAdd : AppCompatActivity(), TimePickerDialog.OnTimeSetListener, Dat
         mYear = year
 
         if(mDay.toString().length <= 1 && mMonth.toString().length <= 1){
-            var mddaystr = "$0$mDay"
+            var mddaystr = "0$mDay"
             var mmonth = "0$mMonth"
             mDate = mddaystr+"/"+ mmonth+"/"+mYear
         }else if (mDay.toString().length > 1 && mMonth.toString().length <= 1){
             var mmonth = "0$mMonth"
             mDate = mDay.toString()+"/"+ mmonth+"/"+mYear
         }else if (mDay.toString().length <=1  && mMonth.toString().length >1){
-            var mddaystr = "$0$mDay"
+            var mddaystr = "0$mDay"
             mDate = mddaystr.toString()+"/"+mMonth+"/"+mYear
         }else{
             mDate = "$mDay/$mMonth/$mYear"
@@ -351,9 +387,6 @@ class reminderAdd : AppCompatActivity(), TimePickerDialog.OnTimeSetListener, Dat
     }
 
     fun onSwitchRepeat(view: View) {
-        var loadCursor = contentResolver.query(mCurrentUri!!, null, null, null, null)!!
-
-
         var on = mRepeatSwitch.isChecked()
         if(on){
             mRepeat= "true"
@@ -447,16 +480,15 @@ class reminderAdd : AppCompatActivity(), TimePickerDialog.OnTimeSetListener, Dat
     }
     fun saveReminder(){
         var values = ContentValues()
+        values.put(AlarmReminderContract.AlermReminderEntry().KEY_TITLE,mTitleText.text.toString())
+        values.put(AlarmReminderContract.AlermReminderEntry().KEY_DATE, mDateText.text.toString())
+        values.put(AlarmReminderContract.AlermReminderEntry().KEY_TIME, mTimeText.text.toString())
+        values.put(AlarmReminderContract.AlermReminderEntry().KEY_REPEAT, mRepeatText.text.toString())
+        values.put(AlarmReminderContract.AlermReminderEntry().KEY_REPEAT_NO, mRepeatIn.text.toString())
+        values.put(AlarmReminderContract.AlermReminderEntry().KEY_REPEAT_TYPE, mRepeatType.text.toString())
+        values.put(AlarmReminderContract.AlermReminderEntry().KEY_ACTIVE, mActive)
 
-        values.put(AlarmReminderContract.AlermReminderEntry().KEY_TITLE,mTitle.trim())
-        values.put(AlarmReminderContract.AlermReminderEntry().KEY_DATE, mDate.trim())
-        values.put(AlarmReminderContract.AlermReminderEntry().KEY_TIME, mTime.trim())
-        values.put(AlarmReminderContract.AlermReminderEntry().KEY_REPEAT, mRepeat.trim())
-        values.put(AlarmReminderContract.AlermReminderEntry().KEY_REPEAT_NO, mRepeatIn_str.trim())
-        values.put(AlarmReminderContract.AlermReminderEntry().KEY_REPEAT_TYPE, mRepeatType_str.trim())
-        values.put(AlarmReminderContract.AlermReminderEntry().KEY_ACTIVE, mActive.trim())
-
-        mCalendar.set(Calendar.MONTH, mMonth)
+        mCalendar.set(Calendar.MONTH, mMonth-1)
         mCalendar.set(Calendar.YEAR, mYear)
         mCalendar.set(Calendar.DAY_OF_MONTH, mDay)
         mCalendar.set(Calendar.HOUR_OF_DAY, mHour)
@@ -469,13 +501,13 @@ class reminderAdd : AppCompatActivity(), TimePickerDialog.OnTimeSetListener, Dat
         if (mRepeatType.text.toString().equals("Minute")){
             mRepeatTime = mRepeatIn.text.toString().toInt() * milMinute
         }else if(mRepeatType.text.toString().equals("Hour")){
-            mRepeatTime = mRepeatIn_str.toInt()*milHour
+            mRepeatTime = mRepeatIn.text.toString().toInt()*milHour
         }else if(mRepeatType.text.toString().equals("Day")){
-            mRepeatTime = mRepeatIn_str.toInt()*milDay
-        }else if(mRepeatType.text.toString().equals("Week")){
-            mRepeatTime = mRepeatIn_str.toInt()*milWeek
+            mRepeatTime = mRepeatIn.text.toString().toInt()*milDay
+        }else if(mRepeatType.text.toString().toString().equals("Week")){
+            mRepeatTime = mRepeatIn.text.toString().toInt()*milWeek
         }else if(mRepeatType.text.toString().equals("Month")){
-            mRepeatTime = mRepeatIn_str.toInt()*milMonth
+            mRepeatTime = mRepeatIn.text.toString().toInt()*milMonth
         }
 
         if(mCurrentUri == null){
@@ -495,37 +527,44 @@ class reminderAdd : AppCompatActivity(), TimePickerDialog.OnTimeSetListener, Dat
                 Toast.makeText(this, "Reminder updated", Toast.LENGTH_SHORT).show()
             }
         }
+
         if(mActive.equals("true")){
             if(mRepeat.equals("true")){
-                val manager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
-                val intent  = Intent(this, reminderAdd.Reciever()::class.java)
-                val pendintIntent = PendingIntent.getBroadcast(this, 42, intent,PendingIntent.FLAG_UPDATE_CURRENT)
-                manager.setRepeating(AlarmManager.RTC_WAKEUP, selectedTimestamp, mRepeatTime, pendintIntent)
+                AlarmScheduler.Singleton.setRepeatAlarm(applicationContext, selectedTimestamp,mCurrentUri!!, mRepeatTime)
             }else if (mRepeat.equals("false")){
-                AlarmScheduler.Singleton.setAlarm(applicationContext,selectedTimestamp, mCurrentUri!!)
+                AlarmScheduler.Singleton.setAlarm(applicationContext, selectedTimestamp, mCurrentUri!!)
             }
         }
-        Toast.makeText(this, "Saved" , Toast.LENGTH_SHORT).show()
+
+        //Toast.makeText(this, "$mActive   $mRepeatTime" , Toast.LENGTH_SHORT).show()
     }
+    fun notification() {
+        var notificationChannel: NotificationChannel
+        val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        val pendingIntent =  PendingIntent.getActivity(this,0,intent,PendingIntent.FLAG_UPDATE_CURRENT)
+        lateinit var builder : Notification.Builder
+        val channelId = "i.apps.notifications"
+        val description = "Test Notification"
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            notificationChannel = NotificationChannel(channelId,description, NotificationManager.IMPORTANCE_DEFAULT)
+            notificationChannel.enableVibration(false)
+            notificationChannel.enableLights(true)
+            notificationManager.createNotificationChannel(notificationChannel)
 
-    class Reciever: BroadcastReceiver(){
-        override fun onReceive(p0: Context?, p1: Intent?) {
-            val manager = NotificationManagerCompat.from(p0!!)
-            var longArr = longArrayOf(1000,1000,1000,1000,1000)
-            var note = NotificationCompat.Builder(p0)
-                    .setContentTitle("iTrack Reminder")
-                    .setContentText("iTrack")
-                    .setSmallIcon(R.drawable.ic_action_notif2)
-                    .setVibrate(longArr)
-                    .setSound(Settings.System.DEFAULT_NOTIFICATION_URI)
-                    .setAutoCancel(true)
-                    .build()
-            manager.notify(NOTIFICATION_ID,note)
-            val v = p0!!.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
-            v.vibrate(1000)
-
+            builder = Notification.Builder (this, channelId)
+                    .setContentTitle("Notification")
+                    .setContentText("QUEUE IS EMPTY")
+                    .setContentIntent(pendingIntent)
+                    .setSmallIcon(R.drawable.ic_launcher_background)
         }
-
+        else{
+            builder = Notification.Builder (this)
+                    .setContentTitle("Notification")
+                    .setContentText("QUEUE IS EMPTY")
+                    .setContentIntent(pendingIntent)
+                    .setSmallIcon(R.drawable.ic_launcher_background)
+        }
+        notificationManager.notify(1234,builder.build())
     }
     fun setRepeatNo(view: View) {
         val dialog = AlertDialog.Builder(this)

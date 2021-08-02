@@ -58,6 +58,16 @@ class CreateAcc : AppCompatActivity() {
         var passtxt = mpassword.text.toString().trim()
         var usertxt = user.text.toString().trim()
 
+        if(TextUtils.isEmpty(usertxt)){
+            mpassword.setError("Username is Required")
+            return
+        }
+
+        if(usertxt.length <= 6  ){
+            mpassword.setError("Username Must be >= 6 Characters")
+            return
+        }
+
         if (TextUtils.isEmpty(usernametxt)){
             username.setError("Email is Required")
             return
@@ -70,35 +80,16 @@ class CreateAcc : AppCompatActivity() {
             username.setError("Must be in EMAIL format example@gmail.com")
             return
         }
-        if(passtxt.length <= 6){
-            mpassword.setError("Username Must be >= 6 Characters")
-            return
-        }
         if(TextUtils.isEmpty(passtxt)){
             mpassword.setError("Password is Required")
             return
         }
-        if(usertxt.length <= 6  ){
-            mpassword.setError("Username Must be >= 6 Characters")
-            return
-        }
-        if(TextUtils.isEmpty(usertxt)){
-            mpassword.setError("Username is Required")
+
+        if(passtxt.length <= 6){
+            mpassword.setError("Password Must be >= 6 Characters")
             return
         }
 
-        auth.createUserWithEmailAndPassword(usernametxt, passtxt).addOnCompleteListener{task ->
-                    if(task.isSuccessful){
-                        val userId = auth.currentUser!!.uid
-                        val firebaseUser = auth.currentUser!!
-                        firebaseUser.sendEmailVerification().addOnSuccessListener {
-                        }
-                        Toast.makeText(this, "User Authenticated", Toast.LENGTH_SHORT).show()
-                    }
-                    else{
-                        Toast.makeText(this, "Error Message: " + task.exception!!.message.toString(), Toast.LENGTH_SHORT).show()
-                    }
-                }
         val intent = Intent(applicationContext, startInformation::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         intent.putExtra("email", usernametxt)
