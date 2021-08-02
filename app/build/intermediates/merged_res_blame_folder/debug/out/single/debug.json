@@ -1,0 +1,666 @@
+[
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_cycle.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-hdpi\\ic_action_cycle.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_community.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-hdpi\\ic_action_community.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_home.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_user.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_user.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_homecalendar.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_homecalendar.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_edit.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-anydpi\\ic_action_edit.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_cycle.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_cycle.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_user.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_user.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_notif2.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_notif2.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_row_graph_grid_view.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\layout\\row_graph_grid_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_support.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_support.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo.jpg.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable\\logo.jpg"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_homecalendar.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_homecalendar.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_support.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-mdpi\\ic_action_support.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_reminder.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_reminder.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_notif2.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-anydpi\\ic_action_notif2.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_home.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-mdpi\\ic_action_home.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\menu_drawer_menu.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\menu\\drawer_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_cycle.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_cycle.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_edit.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-mdpi\\ic_action_edit.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_add.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-anydpi\\ic_action_add.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_name.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_name.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialogshare.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\layout\\dialogshare.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_notif2.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-hdpi\\ic_action_notif2.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_safedays.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-anydpi\\ic_action_safedays.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_event.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\layout\\dialog_event.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_notif.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-anydpi\\ic_action_notif.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_experiod.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-anydpi\\ic_action_experiod.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_dropshadow.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable\\dropshadow.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_experiod.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-hdpi\\ic_action_experiod.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_logout.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\layout\\dialog_logout.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_setting.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-mdpi\\ic_action_setting.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_edit.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-hdpi\\ic_action_edit.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_add.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_add.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_safedays.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-mdpi\\ic_action_safedays.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_fertiledays.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_fertiledays.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_roundstyle.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable\\roundstyle.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_community.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-mdpi\\ic_action_community.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_name.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-hdpi\\ic_action_name.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_experiod.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_experiod.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_pass.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_pass.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_profile.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-hdpi\\ic_action_profile.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_nonotif.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-hdpi\\ic_action_nonotif.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp_reminder_add.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\layout-sw600dp\\reminder_add.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\menu\\bottom_nav_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_pass.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_pass.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_safedays.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_safedays.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_logout.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-mdpi\\ic_action_logout.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_setting.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_setting.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_pass.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-anydpi\\ic_action_pass.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_profile.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_profile.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_nonotif.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_nonotif.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_fertiledays.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-anydpi\\ic_action_fertiledays.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_homecalendar.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-anydpi\\ic_action_homecalendar.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_user.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-mdpi\\ic_action_user.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_add.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-hdpi\\ic_action_add.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_setting.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-anydpi\\ic_action_setting.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_setting.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_setting.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_safedays.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-hdpi\\ic_action_safedays.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_profile.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-mdpi\\ic_action_profile.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_profile.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-anydpi\\ic_action_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_nonotif.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_nonotif.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_experiod.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-mdpi\\ic_action_experiod.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_graph.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_graph.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_row_alarm.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\layout\\row_alarm.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_graph.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-anydpi\\ic_action_graph.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_logout.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_logout.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_imageprof.PNG.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-v24\\imageprof.PNG"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_logout.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_logout.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_pedometer_main.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\layout\\activity_pedometer_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_graph_data.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\layout\\fragment_graph_data.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_drawer_share.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\layout\\drawer_share.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_edit_step_goal.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\layout\\edit_step_goal.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_add.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-mdpi\\ic_action_add.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_drawer_nav_header.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\layout\\drawer_nav_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_start_information.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\layout\\activity_start_information.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_community.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\layout\\fragment_community.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_blank.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\layout\\fragment_blank.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_home.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-anydpi\\ic_action_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_mood_tracker.PNG.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable\\mood_tracker.PNG"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_community.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_community.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\menu_add_reminder_row.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\menu\\add_reminder_row.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_fertiledays.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-hdpi\\ic_action_fertiledays.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_add.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_add.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_edit.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_edit.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_email.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-mdpi\\ic_action_email.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_bg1.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-v24\\bg1.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_notif.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-hdpi\\ic_action_notif.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_support.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-hdpi\\ic_action_support.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_drawer_reminder.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\layout\\drawer_reminder.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_notif.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_notif.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_share.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_share.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_homecalendar.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-hdpi\\ic_action_homecalendar.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_graph_icon.PNG.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable\\graph_icon.PNG"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_logout.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-anydpi\\ic_action_logout.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_home.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_home.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_share.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-hdpi\\ic_action_share.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_welcome_window.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\layout\\activity_welcome_window.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_notif.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_notif.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_edit.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_edit.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_reminder.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-anydpi\\ic_action_reminder.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_setting.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-hdpi\\ic_action_setting.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_pass.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-hdpi\\ic_action_pass.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_experiod.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_experiod.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_logout.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-hdpi\\ic_action_logout.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_share.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_share.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_graph.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-hdpi\\ic_action_graph.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_community.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_community.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_graph.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-mdpi\\ic_action_graph.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_name.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-anydpi\\ic_action_name.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_user.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-hdpi\\ic_action_user.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_share.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-mdpi\\ic_action_share.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_profile.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_profile.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_drawer_pofile.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\layout\\drawer_pofile.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_drawer_signout.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\layout\\fragment_drawer_signout.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_support.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_support.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_nonotif.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-anydpi\\ic_action_nonotif.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_home.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_home.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_fertiledays.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_fertiledays.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_reminder.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-mdpi\\ic_action_reminder.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_user.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-anydpi\\ic_action_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_pass.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-mdpi\\ic_action_pass.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_email.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_email.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_graph.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_graph.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_cycle.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-anydpi\\ic_action_cycle.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_create_acc.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\layout\\activity_create_acc.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_email.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-hdpi\\ic_action_email.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_notif.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-mdpi\\ic_action_notif.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_cycle.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-mdpi\\ic_action_cycle.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_email.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_email.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_name.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-mdpi\\ic_action_name.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_step_icon.PNG.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable\\step_icon.PNG"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_nonotif.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-mdpi\\ic_action_nonotif.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_action_safedays.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xxhdpi\\ic_action_safedays.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_reminder.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_reminder.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_share.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-anydpi\\ic_action_share.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_community.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-anydpi\\ic_action_community.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_scrollview_shadow.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable\\scrollview_shadow.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_reminder_add.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\layout\\reminder_add.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_fertiledays.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-mdpi\\ic_action_fertiledays.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_calendar.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\layout\\fragment_calendar.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_search_black_24dp.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable\\ic_search_black_24dp.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_notif2.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-mdpi\\ic_action_notif2.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_email.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-anydpi\\ic_action_email.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_notif2.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_notif2.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_action_homecalendar.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-mdpi\\ic_action_homecalendar.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi_ic_action_support.xml.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-anydpi\\ic_action_support.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_action_name.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_name.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_reminder.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-hdpi\\ic_action_reminder.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_home.png.flat",
+        "source": "C:\\Users\\HP\\AndroidStudioProjects\\iTrack-master\\iTrack-master\\app\\src\\main\\res\\drawable-hdpi\\ic_action_home.png"
+    }
+]

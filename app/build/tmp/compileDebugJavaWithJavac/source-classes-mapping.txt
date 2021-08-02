@@ -1,0 +1,2 @@
+com/example/itrack/BuildConfig.java
+ com.example.itrack.BuildConfig
