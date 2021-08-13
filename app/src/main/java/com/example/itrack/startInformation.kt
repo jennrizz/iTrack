@@ -187,6 +187,9 @@ import kotlin.collections.HashMap
             Toast.makeText(applicationContext, "You selected $cyclePostion choose one from the provided choices", Toast.LENGTH_SHORT).show()
             return
         }
+         if (avgCycle == "None"){
+             avgCycle = 0
+         }
 
          auth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener{task ->
              if(task.isSuccessful){

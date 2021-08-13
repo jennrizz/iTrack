@@ -112,9 +112,13 @@ class CalendarFragment : Fragment(R.layout.fragment_calendar) {
                 user_period_length = documentSnapshot!!.getString("periodLength").toString().toFloat().toInt()
                 var dateRet = documentSnapshot!!.getString("lperiodday").toString()
 
+                if (user_avg_cycle == 0f){
+                    isValidLastPeriodValid = false
+                }
                 if (dateRet == "I don't remember"){
                     isValidLastPeriodValid = false
-                }else{
+                }
+                if (isValidLastPeriodValid){
                     date = LocalDate.parse(dateRet, ofPattern("yyyy-MM-dd"))
                     if (user_avg_cycle > 0 && isValidLastPeriodValid) {
                     calendarView.datesIndicators = generateCycle(date,user_period_length)
@@ -215,7 +219,6 @@ class CalendarFragment : Fragment(R.layout.fragment_calendar) {
                 var nextMonth = NEXTPERIODDAY.plusMonths(1).month
                 var prediction = abs(inference(user_age, user_avg_cycle, NEXTPERIODDAY.dayOfMonth.toFloat()))
 
-                Toast.makeText(getContext(), "${prediction.toInt()},$nextMonth", Toast.LENGTH_SHORT).show()
 
                 if (prediction > 30) {
                     prediction = prediction - 30
